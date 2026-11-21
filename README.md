@@ -44,6 +44,15 @@ For this reason accuracy alone is not used. The project looks at **precision, re
 
 The dataset is **not included** in this repository. See [Installation](#installation).
 
+### Data exploration
+The data is imbalanced: about 71% ham and 29% spam, so accuracy alone would be misleading.
+
+![Class distribution](reports/class_distribution.png)
+
+Email length does not separate the two classes. Both are mostly short, with a long tail (the last bar groups all emails longer than 1,000 words).
+
+![Email length by class](reports/email_length.png)
+
 ## Approach
 1. Data audit and EDA (class balance, duplicates, email length, most common words).
 2. Remove duplicate emails, then split. The test set is not touched until the end.
